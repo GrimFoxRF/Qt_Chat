@@ -13,7 +13,7 @@ class showMessagesWindow : public QDialog
     Q_OBJECT
 
 public:
-    explicit showMessagesWindow(QWidget *parent = nullptr);
+    explicit showMessagesWindow(DatabaseManager* dbManager, QWidget *parent = nullptr);
     ~showMessagesWindow();
 
 private slots:

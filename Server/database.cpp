@@ -207,3 +207,21 @@ bool DatabaseManager::setBannStatus(const QString &username, bool bannStatus)
 
     return executeQuery(query);
 }
+QVector<QString> DatabaseManager::showUsersNameStatus() {
+    QVector<QString> userNames;
+
+    // Ваш SQL-запрос для извлечения информации о пользователях и их статусе
+    QString query = "SELECT username, isbanned FROM users";
+    QSqlQuery result = executeQueryWithResult(query);
+
+    while (result.next()) {
+        QString username = result.value(0).toString();
+        bool isBanned = result.value(1).toBool();
+
+        // Формируем строку вида "Имя пользователя (Статус)"
+        QString userStatus = username + " (" + (isBanned ? "Заблокирован" : "Активен") + ")";
+        userNames.append(userStatus);
+    }
+
+    return userNames;
+}

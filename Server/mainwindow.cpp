@@ -46,7 +46,7 @@ void MainWindow::on_showMessagesButton_clicked()
 
 void MainWindow::on_bannUserButton_clicked()
 {
-    BannWindow *bannWindow = new BannWindow(this);
+    class BannWindow *bannWindow = new BannWindow(databaseManager, this);
     bannWindow->show();
 }
 

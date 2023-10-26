@@ -33,6 +33,7 @@ public:
 
     QVector<QString> showAllUsersMessages();
     bool setBannStatus(const QString &username, bool bannStatus);
+    QVector<QString> showUsersNameStatus();
 
 private:
     QSqlDatabase database;

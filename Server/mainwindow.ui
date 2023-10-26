@@ -75,7 +75,7 @@ background-color: rgb(72,120,174);</string>
 background-color: rgb(72,120,174);</string>
             </property>
             <property name="text">
-             <string>Bann User</string>
+             <string>Ban User</string>
             </property>
            </widget>
           </item>
