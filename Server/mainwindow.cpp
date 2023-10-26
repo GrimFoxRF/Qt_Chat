@@ -3,9 +3,10 @@
 #include "bannwindow.h"
 #include "./ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent)
+MainWindow::MainWindow(DatabaseManager* databaseManager, QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , ui(new Ui::MainWindow),
+    databaseManager(databaseManager)
 {
     ui->setupUi(this);
     debugWindowBrowser = ui->debugWindowBrowser;
@@ -37,7 +38,7 @@ void MainWindow::on_stopServerButton_clicked()
 
 void MainWindow::on_showMessagesButton_clicked()
 {
-    class showMessagesWindow *showMessages = new class showMessagesWindow;
+    class showMessagesWindow *showMessages = new showMessagesWindow(databaseManager, this);
     showMessages->show();
 
 }

@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QTextBrowser>
 #include "network.h"
+#include "database.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,7 +15,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    MainWindow(DatabaseManager* databaseManager, QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
@@ -29,5 +30,6 @@ private:
     Ui::MainWindow *ui;
     Network *network;
     QTextBrowser *debugWindowBrowser;
+    DatabaseManager* databaseManager;
 };
 #endif // MAINWINDOW_H

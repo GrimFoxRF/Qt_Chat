@@ -7,6 +7,8 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
+    a.setStyle("blue");
+
     QString databaseName = "qt_chat_database.db";
 
     DatabaseManager databaseManager;
@@ -18,7 +20,7 @@ int main(int argc, char *argv[])
         qDebug() << "Ошибка при открытии или создании базы данных.";
     }
 
-    MainWindow w;
+    MainWindow w(&databaseManager);
     w.show();
     return a.exec();
 }

@@ -1,10 +1,10 @@
 #include "showmessageswindow.h"
 #include "ui_showmessageswindow.h"
 
-showMessagesWindow::showMessagesWindow(QWidget *parent) :
+showMessagesWindow::showMessagesWindow(DatabaseManager* dbManager, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::showMessagesWindow),
-    databaseManager(databaseManager)
+    databaseManager(dbManager)
 {
     ui->setupUi(this);
 }
@@ -22,14 +22,20 @@ void showMessagesWindow::on_closeUsersMessagesButton_clicked()
 
 void showMessagesWindow::on_showAllMessagesButton_clicked()
 {
-    QString query = "SELECT message, timestamp FROM chat_history";
-    QSqlQuery result = databaseManager->executeQueryResult(query);
+    DatabaseManager databaseManager;
 
-    // Теперь вы можете обрабатывать результаты запроса и выводить их в окно.
-    while (result.next()) {
-        QString message = result.value(0).toString();
-        QString timestamp = result.value(1).toString();
-        // Ваш код для вывода сообщений в окно usersMessagesBrowser
+    // Вызовите метод showAllUsersMessages для получения сообщений
+    QVector<QString> messages = databaseManager.showAllUsersMessages();
+
+    if (messages.isEmpty()) {
+        // Если сообщений нет, выведите соответствующее сообщение.
+        ui->usersMessagesBrowser->setText("Сообщений нет");
+    } else {
+        // Если есть сообщения, выведите их в окно usersMessagesBrowser.
+        QString allMessages;
+        for (const QString& message : messages) {
+            allMessages += message + "\n";
+        }
+        ui->usersMessagesBrowser->setText(allMessages);
     }
 }
-

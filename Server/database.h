@@ -9,10 +9,10 @@
 class DatabaseManager //: public QObject
 {
 
-   // Q_OBJECT
+    // Q_OBJECT
 
 signals:
-    //void infoMessageDB(const QString &message);
+         //void infoMessageDB(const QString &message);
 
 public:
     DatabaseManager();
@@ -30,6 +30,9 @@ public:
     bool userExists(const QString &username);
     bool createAdminUser();
     QSqlQuery executeQueryResult(const QString &query);
+
+    QVector<QString> showAllUsersMessages();
+    bool setBannStatus(const QString &username, bool bannStatus);
 
 private:
     QSqlDatabase database;

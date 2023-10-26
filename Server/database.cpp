@@ -183,3 +183,27 @@ QSqlQuery DatabaseManager::executeQueryResult(const QString &query)
 
     return sqlQuery;
 }
+
+QVector<QString> DatabaseManager::showAllUsersMessages()
+{
+    QVector<QString> messages;
+
+    QString query = "SELECT message FROM chat_history";
+    QSqlQuery result = executeQueryWithResult(query);
+
+    while (result.next()) {
+        QString message = result.value(0).toString();
+        messages.append(message);
+    }
+
+    return messages;
+}
+
+bool DatabaseManager::setBannStatus(const QString &username, bool bannStatus)
+{
+    QString query = QString("UPDATE users SET isbanned = %1 WHERE username = '%2'")
+                        .arg(bannStatus ? 1 : 0)
+                        .arg(username);
+
+    return executeQuery(query);
+}
