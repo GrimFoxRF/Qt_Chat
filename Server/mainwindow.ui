@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(92,83,142);
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_4">
     <item>
@@ -25,6 +29,9 @@
           <bold>true</bold>
           <underline>true</underline>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(215,255,255);</string>
         </property>
         <property name="text">
          <string>SERVER</string>
@@ -46,6 +53,10 @@
               <bold>true</bold>
              </font>
             </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(215,255,255);
+background-color: rgb(72,120,174);</string>
+            </property>
             <property name="text">
              <string>Stop Server</string>
             </property>
@@ -58,6 +69,10 @@
               <pointsize>14</pointsize>
               <bold>true</bold>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(215,255,255);
+background-color: rgb(72,120,174);</string>
             </property>
             <property name="text">
              <string>Bann User</string>
@@ -72,6 +87,10 @@
               <bold>true</bold>
              </font>
             </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(215,255,255);
+background-color: rgb(72,120,174);</string>
+            </property>
             <property name="text">
              <string>Start Server</string>
             </property>
@@ -84,6 +103,10 @@
               <pointsize>14</pointsize>
               <bold>true</bold>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(215,255,255);
+background-color: rgb(72,120,174);</string>
             </property>
             <property name="text">
              <string>Show Messages</string>
@@ -99,6 +122,10 @@
             <pointsize>14</pointsize>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(215,255,255);
+background-color: rgb(72,120,174);</string>
           </property>
           <property name="text">
            <string>Exit</string>
@@ -118,6 +145,10 @@
             <underline>true</underline>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(215,255,255);
+</string>
+          </property>
           <property name="text">
            <string>Debug Window:</string>
           </property>
@@ -129,6 +160,9 @@
            <font>
             <pointsize>14</pointsize>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(77,156,208);</string>
           </property>
          </widget>
         </item>

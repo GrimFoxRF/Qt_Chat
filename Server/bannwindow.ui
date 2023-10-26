@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(92,83,142);</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -25,6 +28,10 @@
            <pointsize>14</pointsize>
            <bold>true</bold>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(215,255,255);
+background-color: rgb(72,120,174);</string>
          </property>
          <property name="text">
           <string>Bann Current User</string>
@@ -39,6 +46,10 @@
            <bold>true</bold>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(215,255,255);
+background-color: rgb(72,120,174);</string>
+         </property>
          <property name="text">
           <string>Unbann Current User</string>
          </property>
@@ -52,6 +63,10 @@
            <bold>true</bold>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(215,255,255);
+background-color: rgb(72,120,174);</string>
+         </property>
          <property name="text">
           <string>Close Bann Window</string>
          </property>
@@ -61,11 +76,18 @@
      </item>
      <item>
       <widget class="QLabel" name="usersListLabel">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
        <property name="font">
         <font>
          <pointsize>14</pointsize>
          <bold>true</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(215,255,255);
+</string>
        </property>
        <property name="text">
         <string>Users List:</string>
@@ -78,6 +100,9 @@
         <font>
          <pointsize>14</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(77,156,208);</string>
        </property>
       </widget>
      </item>

@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(92,83,142);</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -23,6 +26,10 @@
          <pointsize>14</pointsize>
          <bold>true</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(215,255,255);
+background-color: rgb(72,120,174);</string>
        </property>
        <property name="text">
         <string>Show Messages</string>
@@ -36,6 +43,10 @@
          <pointsize>14</pointsize>
          <bold>true</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(215,255,255);
+background-color: rgb(72,120,174);</string>
        </property>
        <property name="text">
         <string>Close Window</string>
@@ -52,6 +63,10 @@
          <underline>true</underline>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(215,255,255);
+</string>
+       </property>
        <property name="text">
         <string>Users Messages:</string>
        </property>
@@ -63,6 +78,9 @@
         <font>
          <pointsize>14</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(77,156,208);</string>
        </property>
       </widget>
      </item>
